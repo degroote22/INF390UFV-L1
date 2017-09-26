@@ -1,0 +1,26 @@
+{
+  "name": "trabgrafos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^8.0.26",
+    "serve": "^6.0.6",
+    "ts-loader": "^2.3.6",
+    "typescript": "^2.4.2",
+    "webpack": "^3.5.6"
+  },
+  "scripts": {
+    "build:cli": "tsc cli/index.ts",
+    "run:cli": "cd cli && node index.js exemplo.txt",
+    "cli": "npm run build:cli && npm run run:cli",
+    "build:files":
+      "rm -rf web/build && mkdir web/build && cp web/public/* web/build",
+    "build:webpack": " webpack --config web/webpack.js",
+    "build:web": "npm run build:files && npm run build:webpack",
+    "run:web": "serve web/build",
+    "web": "npm run build:web && npm run run:web",
+    "pre":
+      "npm run build:web && rm -rf docs && mkdir docs && mv web/build/* docs"
+  }
+}

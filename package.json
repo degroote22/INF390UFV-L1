@@ -1,0 +1,10 @@
+{
+  "name": "inf390",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/degroote22/INF330UFV-Trab1.git",
+  "license": "MIT",
+  "dependencies": {
+    "gl-matrix": "^2.4.0"
+  }
+}
